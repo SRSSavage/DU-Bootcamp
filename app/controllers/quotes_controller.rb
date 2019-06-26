@@ -2,8 +2,7 @@ class QuotesController < ApplicationController
   def index
     @quote = Quote.order("RANDOM()").first
   end
-
-
+  
 
   def create
     @quote = Quote.create(quote_params)
@@ -16,7 +15,7 @@ class QuotesController < ApplicationController
   def about
   end
 
-  
+
   private
 
   def quote_params
